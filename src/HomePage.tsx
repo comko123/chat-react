@@ -4,7 +4,6 @@ const HomePage = () => {
   const router = useNavigate()
 return(<>
 <h3>start live chat</h3>
-<button onClick = {()=>router('/stomp')}>Stomp Chat</button> &nbsp;&nbsp;
 <button onClick = {()=>router('/soket')}>Soket Chat</button>
 </>)
 } 
