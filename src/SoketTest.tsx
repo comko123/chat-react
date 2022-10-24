@@ -1,5 +1,7 @@
 import { useRef } from 'react'
 import SockJS from 'sockjs-client'
+
+
 const sock = new SockJS('https://chat-springmvc.herokuapp.com/chat')
 
 const SoketTest = () => {
@@ -13,6 +15,7 @@ const SoketTest = () => {
     }
     const onMessage = (msg:any) => {
         const data = msg.data
+        console.log(msg)
         let sessionId = null 
         let message = null
         const arr = data.split(":")
@@ -33,13 +36,14 @@ const SoketTest = () => {
     
     const onOpen = () => {
         if(!out.current)return;
+
         return out.current.textContent = "user님이 입장하셨습니다."
     }
     sock.onmessage = onMessage
     sock.onclose = onClose
     sock.onopen = onOpen
     return(<><h1>chat</h1>
-	<hr/>
+	<hr/><></>
 	<div><div id="msgArea" ></div><div>
             {onOpen()}
             <div ref={out}></div>
