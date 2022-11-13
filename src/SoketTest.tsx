@@ -26,7 +26,6 @@ const [chat,setChat] = useState<(string|undefined)[]>([])
         console.log("cur_session : " + cur_session)
         sessionId = arr[0]
         message = arr[1]
-        
         if(sessionId === cur_session){
         return <p>{sessionId+":"+message}</p>}
         else{return <p>{sessionId+":"+message}</p>}}
