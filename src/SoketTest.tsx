@@ -17,6 +17,7 @@ const [chat,setChat] = useState<(string|undefined)[]>([])
     const onMessage = (msg:any) => {
         const data = msg.data
         console.log(msg)
+        console.log(data)
         let sessionId = null 
         let message = null
         const arr = data.split(":")
