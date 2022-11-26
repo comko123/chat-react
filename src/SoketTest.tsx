@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import SockJS from 'sockjs-client'
 
-const sock = new SockJS('https://chat-springmvc.herokuapp.com/chat')
+const sock=new SockJS('https://chat-springmvc.herokuapp.com/chat')
 
 const SoketTest = () => {
     const navigate =  useNavigate()
