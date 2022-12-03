@@ -51,9 +51,7 @@ const [chat,setChat] = useState<(string|undefined)[]>([])
             <form onSubmit={e=>e.preventDefault()}>
 			message : <input type="text" id="msg" ref = {msg}/>
 			<input type = "button" onClick={sendMessage} value = "보내기"/>
-            <input type = "button" onClick={()=>{
-                onClose()
-                navigate('/')
-            }} value = "나가기"/>
+            <input type = "button" onClick={()=>{onClose()
+            navigate('/')}} value = "나가기"/>
     </form></div></div></>)}
 export default SoketTest
